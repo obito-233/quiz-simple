@@ -6,8 +6,13 @@
 const getData = async () =>
   await fetch('https://jsonplaceholder.typicode.com/todos/').then((response) => response.json());
 
-getData().then((e) => console.log(e));
-
+getData().then((e:Obj) => console.log(e));
+type Obj={
+  uaerId:number;
+  id:number;
+  title:string;
+  complated:boolean
+}
 // * ---------------- TS 的示例
 
 // * 如果你没用过 TS，可以试着快速学习一下

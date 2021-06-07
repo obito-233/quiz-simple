@@ -5,8 +5,16 @@
  * @param {number} end 结束范围
  * @returns {number} 返回和
  */
-const getSumOfTriple = (arr, start, end) => {
+const getSumOfTriple = (arr, start=0, end=Infinity) => {
   // 请实现……
+  let sum=0;
+  arr.forEach((value,i)=>{
+    if (value>=start&&value<=end&&value%3===0) {
+      sum +=value
+  }
+  
+  })
+  return sum
 };
 
 // * ---------------- 实现的效果：
